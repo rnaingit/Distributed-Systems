@@ -1,0 +1,133 @@
+{
+	"variables": [],
+	"info": {
+		"name": "PubSub-DS",
+		"_postman_id": "910dfaf3-746c-ef0b-5321-c68e8ce05f8e",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Covid Data For Subscriber",
+			"request": {
+				"url": "http://localhost:8080/api/subscriber/subscriberData/gharpure",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Subscriber Topics",
+			"request": {
+				"url": "http://localhost:8080/api/subscriber/delete",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"gharpure\",\n\t\"topics\":[\"AL\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Advertise Topics",
+			"request": {
+				"url": "http://localhost:8080/api/topics/advertise",
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "Add Subscriber And Topics",
+			"request": {
+				"url": "http://localhost:8080/api/subscriber/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\":\"gharpure\",\n\t\"topics\":[\"NY\",\"IL\",\"KY\",\"KS\",\"WY\"]\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "User Login",
+			"request": {
+				"url": "http://localhost:8080/api/login",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n \t\"email\":\"gharpure\",\n\t\"password\":\"password\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "User Logout",
+			"request": {
+				"url": "http://localhost:8080/api/logout",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\n\t\"email\" : \"gharpure\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "User Registration",
+			"request": {
+				"url": "http://localhost:8080/api/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"username\": \"gharpure\",\n\t\"email\":\"gharpure.amol@gmail.com\",\n\t\"password\":\"password123\"\n\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
